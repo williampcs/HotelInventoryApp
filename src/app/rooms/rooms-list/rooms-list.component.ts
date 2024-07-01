@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { RoomList } from '../rooms';
 
 @Component({
   selector: 'hinv-rooms-list',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rooms-list.component.scss']
 })
 export class RoomsListComponent implements OnInit {
+
+  @Input() rooms: RoomList[] = [];
 
   constructor() { }
 
