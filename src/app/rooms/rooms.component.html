@@ -2,8 +2,7 @@
 
 <div [hidden]="hideRooms">
     numbe of rooms:
-    <div [ngStyle]="{'color' : rooms.availableRooms ? 'green': 'red'}"
-        [innerText]="numberOfRooms">
+    <div [ngStyle]="{'color' : rooms.availableRooms ? 'green': 'red'}" [innerText]="numberOfRooms">
     </div>
 </div>
 
@@ -11,8 +10,13 @@
 
 <!-- {{roomList | json}} -->
 
+<div *ngIf="selectRoom">
+    {{selectedRoom | json}}
+</div>
+
 <div *ngIf="rooms.availableRooms > 0">
-<hinv-rooms-list [rooms] = "roomList"></hinv-rooms-list>
+    <hinv-rooms-list [rooms]="roomList" (selectedRoom)="selectRoom($event)">
+    </hinv-rooms-list>
 </div>
 
 <button (click)="toggle()">Toggle</button>
