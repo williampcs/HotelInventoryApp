@@ -19,42 +19,43 @@ export class RoomsComponent implements OnInit {
     bookedRooms: 5
   }
 
-  roomList: RoomList[] = [
-    {
-      roomNumber:1,
-      roomType:'Deluxe Room',
-      amenities: 'Free Wi-Fi',
-      price: 500,
-      photos: 'https://demo-source.imgix.net/house.jpg',
-      checkinTime: new Date('11-Nov-2021'),
-      checkoutTime: new Date('12-Nov-2021'),
-      rating: 4.5
-    },
-    {
-      roomNumber:2,
-      roomType:'Deluxe Room',
-      amenities: 'Free Wi-Fi',
-      price: 1000,
-      photos: 'https://demo-source.imgix.net/house.jpg',
-      checkinTime: new Date('11-Nov-2021'),
-      checkoutTime: new Date('12-Nov-2021'),
-      rating: 3.4
-    },
-    {
-      roomNumber:3,
-      roomType:'Private Suite',
-      amenities: 'Free Wi-Fi',
-      price: 15000,
-      photos: 'https://demo-source.imgix.net/house.jpg',
-      checkinTime: new Date('11-Nov-2021'),
-      checkoutTime: new Date('12-Nov-2021'),
-      rating: 2.6
-    }
-  ]
+  roomList: RoomList[] = []
 
   constructor() { }
 
   ngOnInit(): void {
+    this.roomList = [
+      {
+        roomNumber:1,
+        roomType:'Deluxe Room',
+        amenities: 'Free Wi-Fi',
+        price: 500,
+        photos: 'https://demo-source.imgix.net/house.jpg',
+        checkinTime: new Date('11-Nov-2021'),
+        checkoutTime: new Date('12-Nov-2021'),
+        rating: 4.5
+      },
+      {
+        roomNumber:2,
+        roomType:'Deluxe Room',
+        amenities: 'Free Wi-Fi',
+        price: 1000,
+        photos: 'https://demo-source.imgix.net/house.jpg',
+        checkinTime: new Date('11-Nov-2021'),
+        checkoutTime: new Date('12-Nov-2021'),
+        rating: 3.4
+      },
+      {
+        roomNumber:3,
+        roomType:'Private Suite',
+        amenities: 'Free Wi-Fi',
+        price: 15000,
+        photos: 'https://demo-source.imgix.net/house.jpg',
+        checkinTime: new Date('11-Nov-2021'),
+        checkoutTime: new Date('12-Nov-2021'),
+        rating: 2.6
+      }
+    ]
   }
 
   toggle(){
